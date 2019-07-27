@@ -3,3 +3,8 @@ os: linux
 files:
   - source: src/
     destination: /etc/codeDeploy/iplass_front
+hooks:
+  AfterInstall:
+    - location: scripts/after.sh
+      timeout: 300
+      runas: root
