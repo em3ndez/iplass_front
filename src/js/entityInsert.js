@@ -1,5 +1,4 @@
 $(document).on('click', '#ajax', function(){
-  $('form').submit(function(){
   var formData = $("form").serializeArray();
   var formJson = "{";
   for (var i=0; i<formData.length; i++) {
