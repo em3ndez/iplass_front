@@ -15,7 +15,7 @@ $(document).on('click', '#ajax', function(){
         url:"/iplass/test_tenant/api/mtp/entity/test",  // POST送信先のURL
         data:JSON.stringify(formJson),  // JSONデータ本体
         contentType: 'application/json', // リクエストの Content-Type
-        dataType: "jsonp",           // レスポンスをJSONとしてパースする
+        dataType: "application/json",           // レスポンスをJSONとしてパースする
       　headers: {
             'X-Auth-Id' : 'admin@test_tenant',
             'X-Auth-Password' : '11111111',
