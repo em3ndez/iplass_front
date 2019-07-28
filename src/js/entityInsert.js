@@ -12,7 +12,7 @@ $(document).on('click', '#ajax', function(){
   
   $.ajax({
         type:"post",                // method = "POST"
-        url:"http://iplass3.ali3051.foobar.iplass.jp/iplass/test_tenant/api/mtp/entity/test",  // POST送信先のURL
+        url:"/iplass/test_tenant/api/mtp/entity/test",  // POST送信先のURL
         data:JSON.stringify(formJson),  // JSONデータ本体
         contentType: 'application/json', // リクエストの Content-Type
         dataType: "jsonp",           // レスポンスをJSONとしてパースする
