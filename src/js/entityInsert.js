@@ -1,3 +1,3 @@
-$('#ajax').on('click',function(){
+$('#ajax').click(function(){
 alert("ajax");
 });
