@@ -1,3 +1,3 @@
-$('#ajax').click(function(){
-alert("ajax");
+$(document).on('click', '#ajax', function(){
+  alert('Button is clicked');
 });
