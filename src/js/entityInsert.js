@@ -6,6 +6,6 @@
 
 
 
-$('form').submit(function(){
-alert("submit")
+$('#ajax').on('click',function(){
+alert("ajax")
 });
