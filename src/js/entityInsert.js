@@ -40,8 +40,6 @@ $(document).on("click", ".add", function() {
     $(".del:last").clone(true).attr('type','button').appendTo($("#form_1 td:last"));
 });
 $(document).on("click", ".del", function() {
-    var target = $(this).parent();
-    if (target.parent().children().length > 1) {
-        target.remove();
-    }
+    var target = $(this).parent().parent();
+    target.remove();
 });
