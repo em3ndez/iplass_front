@@ -41,7 +41,7 @@ $(document).on("click", ".add", function() {
     $("#form_1 td:last").append('<input type="text" class="json">');
     $("#form_1 input:last").attr('name',$(".form-control").val());
     $("#form_1 tr:last").append('<td></td>');
-    $(".del:last").clone(true).attr('type','button').appendTo($("#form_1 td:last")).trriger('create');
+    $(".del:last").clone(true).attr('type','button').appendTo($("#form_1 td:last")).trigger('create');
 });
 $(document).on("click", ".del", function() {
     var target = $(this).parent().parent();
