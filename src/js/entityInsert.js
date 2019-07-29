@@ -42,7 +42,7 @@ $(document).on("click", ".add", function() {
     $("#form_1 input:last").attr('name',$(".form-control").val());
     $("#form_1 tr:last").append('<td></td>');
     $(".del:last").clone(true).attr('type','button').appendTo($("#form_1 td:last")).trigger('create');
-    $("#form_1 .del:last").css({"width":"30px", "height":"30px", "border":"1px solid #ccc", "background":"#fff", "border-radius":"5px", "padding":"0", "margin":"0"});
+    $("#form_1 .del:last").css({"width":"20px", "height":"20px", "border":"1px solid #ccc", "background":"#fff", "border-radius":"5px", "padding":"0", "margin":"0"});
 });
 $(document).on("click", ".del", function() {
     var target = $(this).parent().parent();
