@@ -36,6 +36,7 @@ $(document).on('click', '#ajax', function(){
 
 $(document).on("click", ".add", function() {
     $("#form_1 table").append('<tr></tr>').append('<td></td>').append($(".form-control").val());
+    $("#form_1 tr:last").append('<td></td>').append('<input type="text" class="json">').attr('name',$(".form-control").val());
     $(".del:last").clone(true).attr('type','button').insertAfter($("#form_1 td:last"));
 });
 $(document).on("click", ".del", function() {
