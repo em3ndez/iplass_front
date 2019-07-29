@@ -16,15 +16,10 @@ $(document).on('click', '#ajax', function(){
             'X-Auth-Id' : 'admin@test_tenant',
             'X-Auth-Password' : '11111111'
         },
-        success: function(json_data) {   // 200 OK時
-            // JSON Arrayの先頭が成功フラグ、失敗の場合2番目がエラーメッセージ
-            // if (!json_data[0]) {    // サーバが失敗を返した場合
-            //    alert("Transaction error. " + json_data[1]);
-            //    return;
-            // }
+        success: function(responce) {   // 200 OK時
             // 成功時処理
-            location.reload();
-            alert(json_data[0]);
+            //location.reload();
+            alert(JSON.stringify(responce));
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {         // HTTPエラー時
             alert("Server Error. Pleasy try again later.");
