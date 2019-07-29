@@ -4,7 +4,7 @@ $(document).on('click', '#ajax', function(){
   for (var i=0; i<formData.length; i++) {
     formJson[formData[i].name]=formData[i].value;
   }
-  alert (formJson);
+  alert (JSON.stringify(formJson));
   
   $.ajax({
         type:"post",                // method = "POST"
