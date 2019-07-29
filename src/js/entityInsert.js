@@ -19,7 +19,7 @@ $(document).on('click', '#ajax', function(){
         success: function(responce) {   // 200 OK時
             // 成功時処理
             //location.reload();
-            $('#responce_json').html("URL: /iplass/test_tenant/api/mtp/entity/"+formData[0].value);
+            $('#responce_url').html("URL: /iplass/test_tenant/api/mtp/entity/"+formData[0].value);
             $('#responce_json').html("JSON: "+JSON.stringify(responce));
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {         // HTTPエラー時
