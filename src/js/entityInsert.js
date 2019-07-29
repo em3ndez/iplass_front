@@ -18,10 +18,10 @@ $(document).on('click', '#ajax', function(){
         },
         success: function(json_data) {   // 200 OK時
             // JSON Arrayの先頭が成功フラグ、失敗の場合2番目がエラーメッセージ
-            if (!json_data[0]) {    // サーバが失敗を返した場合
-                alert("Transaction error. " + json_data[1]);
-                return;
-            }
+            // if (!json_data[0]) {    // サーバが失敗を返した場合
+            //    alert("Transaction error. " + json_data[1]);
+            //    return;
+            // }
             // 成功時処理
             location.reload();
             alert(json_data[0]);
