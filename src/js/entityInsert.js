@@ -18,8 +18,7 @@ $(document).on('click', '#ajax', function(){
         dataType: "json",           // レスポンスをJSONとしてパースする
       　headers: {
             'X-Auth-Id' : 'admin@test_tenant',
-            'X-Auth-Password' : '11111111',
-            'X-Requested-With' : 'XMLHttpRequest'
+            'X-Auth-Password' : '11111111'
         },
         success: function(json_data) {   // 200 OK時
             // JSON Arrayの先頭が成功フラグ、失敗の場合2番目がエラーメッセージ
