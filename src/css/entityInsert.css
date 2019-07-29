@@ -2,6 +2,11 @@ body {
   background-color: #a3d5d3;
 }
 
+.inline-block {
+    display: inline-block;      /* インラインブロック要素にする */
+    padding:  10px;             /* 余白指定 */
+}
+
 #input_plural {
     margin: 10px 0;
 }
