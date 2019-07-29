@@ -35,9 +35,13 @@ $(document).on('click', '#ajax', function(){
 
 
 $(document).on("click", ".add", function() {
-    $("#form_1 table").append('<tr></tr>').append('<td></td>').append($(".form-control").val());
-    $("#form_1 tr:last").append('<td></td>').append('<input type="text" class="json">').attr('name',$(".form-control").val());
-    $(".del:last").clone(true).attr('type','button').insertAfter($("#form_1 td:last"));
+    $('#form_1 table').append($('<tr/>').append('<td/>'));
+    $("#form_1 td:last").append($(".form-control").val());
+    $("#form_1 tr:last").append('<td></td>');
+    $("#form_1 td:last").append('<input type="text" class="json">');
+    $("#form_1 input:last").attr('name',$(".form-control").val());
+    $("#form_1 tr:last").append('<td></td>');
+    $(".del:last").clone(true).attr('type','button').appendTo($("#form_1 td:last")).trriger('create');
 });
 $(document).on("click", ".del", function() {
     var target = $(this).parent().parent();
