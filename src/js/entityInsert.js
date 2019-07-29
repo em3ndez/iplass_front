@@ -8,7 +8,7 @@ $(document).on('click', '#ajax', function(){
   
   $.ajax({
         type:"post",                // method = "POST"
-        url:"/iplass/test_tenant/api/mtp/entity/test",  // POST送信先のURL
+        url:"/iplass/test_tenant/api/mtp/entity/"+formData[0].value,  // POST送信先のURL
         data:JSON.stringify(formJson),  // JSONデータ本体
         contentType: 'application/json', // リクエストの Content-Type
         dataType: "json",           // レスポンスをJSONとしてパースする
