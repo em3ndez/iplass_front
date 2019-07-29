@@ -35,7 +35,7 @@ $(document).on('click', '#ajax', function(){
 
 
 $(document).on("click", ".add", function() {
-    $(this).parent().clone(true).insertAfter($(this).parent());
+    $("#form_1 tr:first").clone(true).insertAfter($("#form_1 tr:last"));
 });
 $(document).on("click", ".del", function() {
     var target = $(this).parent();
