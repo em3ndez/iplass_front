@@ -4,7 +4,8 @@ $(document).on('click', '#ajax', function(){
   for (var i=0; i<formData.length; i++) {
     formJson[formData[i].name]=formData[i].value;
   }
-  $('#request_json').html(JSON.stringify(formJson));
+  $('#request_url').html("URL: /iplass/test_tenant/api/mtp/entity/"+formData[0].value);
+  $('#request_json').html("JSON: "+JSON.stringify(formJson));
   
   $.ajax({
         type:"post",                // method = "POST"
@@ -19,7 +20,6 @@ $(document).on('click', '#ajax', function(){
         success: function(responce) {   // 200 OK時
             // 成功時処理
             //location.reload();
-            $('#responce_url').html("URL: /iplass/test_tenant/api/mtp/entity/"+formData[0].value);
             $('#responce_json').html("JSON: "+JSON.stringify(responce));
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {         // HTTPエラー時
