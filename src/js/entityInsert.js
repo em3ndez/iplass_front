@@ -4,7 +4,6 @@ $(document).on('click', '#ajax', function(){
   for (var i=0; i<formData.length; i++) {
     formJson[formData[i].name]=formData[i].value;
   }
-  alert (JSON.stringify(formJson));
   $('#request_json').html(JSON.stringify(formJson));
   
   $.ajax({
@@ -20,7 +19,6 @@ $(document).on('click', '#ajax', function(){
         success: function(responce) {   // 200 OK時
             // 成功時処理
             //location.reload();
-            alert(JSON.stringify(responce));
             $('#responce_json').html(JSON.stringify(responce));
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {         // HTTPエラー時
