@@ -22,3 +22,13 @@ body {
     padding: 0;
     margin: 0;
 }
+
+#ajax {
+    width: 60px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+}
