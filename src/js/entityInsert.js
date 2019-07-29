@@ -5,6 +5,7 @@ $(document).on('click', '#ajax', function(){
     formJson[formData[i].name]=formData[i].value;
   }
   alert (JSON.stringify(formJson));
+  $('#request_json').html(JSON.stringify(formJson));
   
   $.ajax({
         type:"post",                // method = "POST"
@@ -20,6 +21,7 @@ $(document).on('click', '#ajax', function(){
             // 成功時処理
             //location.reload();
             alert(JSON.stringify(responce));
+            $('#responce_json').html(JSON.stringify(responce));
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {         // HTTPエラー時
             alert("Server Error. Pleasy try again later.");
