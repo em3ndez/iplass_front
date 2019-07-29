@@ -1,15 +1,15 @@
 $(document).on('click', '#ajax', function(){
   var formData = $("form").serializeArray();
-  var formJson = {}
+  var formJson = {};
   for (var i=0; i<formData.length; i++) {
-    formJson.formData[i].name = formData[i].value
+    formJson[formData[i].name]=formData[i].value;
   }
   alert (formJson);
   
   $.ajax({
         type:"post",                // method = "POST"
         url:"/iplass/test_tenant/api/mtp/entity/test",  // POST送信先のURL
-        data:formJson,  // JSONデータ本体
+        data:JSON.stringify(formJson),  // JSONデータ本体
         contentType: 'application/json', // リクエストの Content-Type
         dataType: "json",           // レスポンスをJSONとしてパースする
       　headers: {
@@ -33,7 +33,7 @@ $(document).on('click', '#ajax', function(){
             console.log("errorThrown    : " + errorThrown.message);
         },
         complete: function() {      // 成功・失敗に関わらず通信が終了した際の処理
-            button.attr("disabled", false);  // ボタンを再び enableにする
+            //button.attr("disabled", false);  // ボタンを再び enableにする
         }
     });
 });
